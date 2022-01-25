@@ -23,3 +23,4 @@ else {
 echo "La valeur est $resultat.";
 ?>
 <p> <a href = "boucles.php"> Boucles </a> </p>
+<p> <a href = "inclusion.php"> Inclusion </a> </p>
