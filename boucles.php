@@ -14,3 +14,10 @@ for ($i = 0; $i < 100; $i++) {
 $resultat .= "</ul>";
 
 echo $resultat;
+
+$toto = 0;
+
+while ($toto < 100) {
+    echo $toto . "br/>";
+    $toto++;
+}
