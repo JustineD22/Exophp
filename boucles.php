@@ -18,6 +18,6 @@ echo $resultat;
 $toto = 0;
 
 while ($toto < 100) {
-    echo $toto . "br/>";
+    echo $toto . "<br/>";
     $toto++;
 }
