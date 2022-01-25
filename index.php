@@ -1,5 +1,9 @@
 <?php
 
+require_once 'fonctions.php';
+bonjour ();
+
+$truc = bonjourPerso ("Michel");
 $valeur = 42;
 $resultat = "";
 
