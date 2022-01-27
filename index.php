@@ -9,7 +9,7 @@ var_dump(TVA);
 //__DIR__ : nom dossier dans lequel est le fichier
 //__FUNCTION__ : contient nom de la fonction
 
-$surface = surface(10, 22.5);
+$surface = surfaceRectangle(10, 22.5);
 var_dump($surface);
 
 $truc = bonjourPerso ("Michel");

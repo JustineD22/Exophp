@@ -22,7 +22,26 @@ function volume (float $x, float $y, float $z): float
 
 function dump($param)
 {
-    echo "<pre>"
+    echo "<pre>";
     var_dump($param);
-    echo "</pre>"
+    echo "</pre>";
+}
+
+function afficherTab(array $tableau): string
+{
+    $resultat = "<ul>";
+
+    for ($i = 0; $i < count($tableau); $i++){
+        $resultat .= "<li>";
+        if(is_array($tableau[$i])){
+            $resultat .= "C'est un tableau !";
+    } else {
+        $resultat .= $tableau[$i];
+    } 
+     $resultat.="</li>";
+    } 
+
+    $resultat.= "</ul>";
+
+    return $resultat;
 }
