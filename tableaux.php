@@ -21,3 +21,8 @@ $stagiaires = [
 $stagiaires['Jean'] = 48;
 
 dump($stagiaires);
+
+foreach ($stagiaires as $cle => $valeur) {
+    echo $cle . 'a' .$valeur .'ans';
+}
+
