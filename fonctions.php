@@ -19,3 +19,10 @@ function volume (float $x, float $y, float $z): float
 {
     return abs($x) * abs($y) * abs($z);
 }
+
+function dump($param)
+{
+    echo "<pre>"
+    var_dump($param);
+    echo "</pre>"
+}
