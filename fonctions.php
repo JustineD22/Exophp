@@ -1,23 +1,29 @@
 <?php
 
-function bonjour ()
+function bonjour()
 {
     echo "Bonjour !";
 }
 
-function bonjourPerso (string $nom): string 
+function bonjourPerso(string $nom): string
 {
     return "Bonjour $nom !";
 }
 
-function surfaceRectangle (float $x, float $y): float 
+function surfaceRectangle(float $x, float $y): float
 {
     return abs($x) * abs($y);
 }
 
-function volume (float $x, float $y, float $z): float
+function volumeParallepipede(float $x, float $y, float $z): float
 {
     return abs($x) * abs($y) * abs($z);
+}
+
+function volParAvecSurface(float $x, float $y, float $z): float
+{
+    $volume = abs($z) * surfaceRectangle($x, $y);
+    return $volume;
 }
 
 function dump($param)
@@ -27,21 +33,32 @@ function dump($param)
     echo "</pre>";
 }
 
-function afficherTab(array $tableau): string
+function afficherTableau(array $tableau): string
 {
     $resultat = "<ul>";
 
-    for ($i = 0; $i < count($tableau); $i++){
+    for ($i = 0; $i < count($tableau); $i++) {
         $resultat .= "<li>";
-        if(is_array($tableau[$i])){
-            $resultat .= "C'est un tableau !";
-    } else {
-        $resultat .= $tableau[$i];
-    } 
-     $resultat.="</li>";
-    } 
 
-    $resultat.= "</ul>";
+        if (is_array($tableau[$i])) {
+            $resultat .= afficherTableau($tableau[$i]);
+        } else {
+            $resultat .= $tableau[$i];
+        }
+
+        $resultat .= "</li>";
+    }
+
+    $resultat .= "</ul>";
 
     return $resultat;
+}
+
+function factorielle(int $nombre): int
+{
+    if ($nombre === 0) {
+        return 1;
+    } else {
+        return $nombre * factorielle($nombre - 1);
+    }
 }
